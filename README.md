@@ -19,6 +19,7 @@ Custom JavaScript, CSS & images for the SIS project
 ## Contributing
 
 1. Fork it!
+1. Create a jira in the [SIS Replacement Project](https://jira.berkeley.edu/browse/SISRP)
 1. Create your feature branch: `git checkout -b SISRP-XXXX-my-new-feature`
 1. Commit your changes: `git commit -m 'SISRP-XXXX - Add some feature'`
 1. Push to the branch: `git push origin SISRP-XXXX-my-new-feature`
