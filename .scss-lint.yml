@@ -1,0 +1,20 @@
+exclude:
+  - 'node_modules/**'
+
+linters:
+  ImportantRule:
+    enabled: false
+  NameFormat:
+    allow_leading_underscore: false
+  NestingDepth:
+    max_depth: 7
+  SelectorDepth:
+    enabled: false
+  SelectorFormat:
+    class_convention: ^(uc\-|ps(_|-)|psc_)[a-zA-Z0-9\-]+$
+  StringQuotes:
+    enabled: false
+  QualifyingElement:
+    enabled: false
+  UrlFormat:
+    enabled: false

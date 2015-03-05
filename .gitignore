@@ -1,0 +1,23 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Tempfiles
+/tmp
+
+# .DS_Store files on Mac
+.DS_Store
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# SASS cache
+.sass-cache
+
+# Node modules
+/node_modules
+
+# Npm log
+npm-debug.log
+
+# Dist directory
+/dist

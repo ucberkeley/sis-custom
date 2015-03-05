@@ -1,0 +1,294 @@
+.uc-prototype {
+  color: $uc-color-text;
+  font-family: Arial,sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 20px;
+
+  // Hide the header on the page
+  .ps_header {
+    display: none;
+  }
+
+  // Headers
+  .uc-header-2 {
+    color: $uc-color-text;
+    font-family: "Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .ps_header-group {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .ps_box-label {
+    display: none;
+  }
+
+  // Select Appointment
+  .uc-select {
+    background: $uc-color-blue-light;
+    border: 1px solid $uc-color-blue-dark;
+    border-radius: 5px;
+    max-width: 500px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    &:before {
+      background: url("//f.cl.ly/items/1Z2I1t2x3u322k182d1y/select_arrow_20x28.svg") no-repeat, $uc-color-blue-light;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 20px;
+      z-index: -1;
+    }
+
+    select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      background: transparent;
+      border: 0;
+      color: $uc-color-white;
+      cursor: pointer;
+      font-size: 11px;
+      margin: 0;
+      padding: 4px 25px 5px 10px;
+      width: 100%;
+
+      option {
+        color: $uc-color-text;
+      }
+
+      &::-ms-expand {
+        display: none;
+      }
+    }
+  }
+
+  :-moz-any(.uc-select):before {
+    background-color: $uc-color-white;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  // Select date
+  .uc-table-date table {
+    border: 0;
+    max-width: 800px;
+    width: 100%;
+
+    table {
+      margin: -5px;
+
+      tr {
+        float: left;
+
+        td:not(:nth-child(2)) {
+          display: none;
+        }
+
+        td:nth-child(2) {
+          border: 0;
+
+          a {
+            background: $uc-color-blue-light;
+            color: $uc-color-white;
+            display: block;
+            margin: 5px;
+            padding: 40px 20px;
+            text-decoration: none;
+
+            &:focus,
+            &:hover {
+              text-decoration: underline;
+            }
+
+            &[disabled="disabled"] {
+              background: $uc-color-grey;
+            }
+          }
+        }
+      }
+    }
+
+    th {
+      display: none;
+    }
+  }
+
+  // Make an appointment
+  .uc-table-appointment table {
+    width: 100%;
+
+    table {
+      .ps_box-button {
+        margin-top: 30px;
+        text-align: left;
+
+        &:after,
+        &:before {
+          content: " ";
+          display: table;
+        }
+
+        &:after {
+          clear: both;
+        }
+
+        a {
+          background: $uc-color-blue-light;
+          border: 1px solid $uc-color-blue-dark;
+          border-radius: 5px;
+          color: $uc-color-white;
+          display: inline-block;
+          font-size: 13px;
+          padding: 5px 15px;
+          text-decoration: none;
+
+          &:focus,
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      th {
+        display: none;
+      }
+
+      tr {
+        border-bottom: 1px solid $uc-color-grey;
+        display: block;
+        padding: 10px 5px;
+
+        .ps_box-checkbox {
+          clear: both;
+          display: block;
+
+          &:first-child {
+            margin-top: 10px;
+          }
+
+          &:last-child {
+            margin-bottom: 10px;
+          }
+        }
+
+        .ps_grid-cell {
+          display: none;
+        }
+
+        .ps-icon-wrapper {
+          display: none;
+        }
+
+        input[type="checkbox"] {
+          float: left;
+          margin: 4px;
+        }
+
+        input[type="text"] {
+          border: 0;
+          font-size: 13px;
+        }
+
+        label {
+          float: left;
+          font-size: 13px;
+          padding: 1px;
+        }
+
+        td {
+          &:nth-child(1) {
+            display: none;
+          }
+
+          &:nth-child(2),
+          &:nth-child(3) {
+            float: left;
+            max-width: 70px;
+
+            input[type="text"] {
+              color: $uc-color-blue-dark !important;
+            }
+          }
+
+          &:nth-child(4) {
+            float: left;
+          }
+
+          &:nth-child(5) {
+            input[type="text"] {
+              color: $uc-color-grey;
+            }
+          }
+
+          &:nth-child(6),
+          &:nth-child(7),
+          &:nth-child(8),
+          &:nth-child(9) {
+            margin-left: 140px;
+          }
+        }
+      }
+
+      td {
+        display: block;
+        padding: 0;
+      }
+    }
+
+    &,
+    td {
+      border: 0;
+    }
+  }
+
+  .uc-scheduled {
+    border: 2px solid $uc-color-green;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+
+    &:before {
+      color: $uc-color-text;
+      content: " ✔";
+      float: left;
+      margin-right: 5px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .uc-table-date table table tr td:nth-child(2) a {
+      clear: both;
+      margin: 0;
+      padding: 10px 25px;
+    }
+
+    .uc-table-appointment table table tr td {
+      &:nth-child(4) {
+        width: 120px;
+      }
+
+      &:nth-child(5) {
+        display: none;
+      }
+    }
+  }
+}
+
+// Hide the global load icon
+.psc_processing {
+  display: none !important;
+}
