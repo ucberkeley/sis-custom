@@ -1,4 +1,4 @@
-# SIS Custom
+# SIS Custom - [![Build Status](https://travis-ci.org/ucberkeley/sis-custom.svg?branch=master)](https://travis-ci.org/ucberkeley/sis-custom)
 
 Custom JavaScript, CSS & images for the SIS project
 
