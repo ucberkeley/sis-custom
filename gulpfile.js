@@ -7,3 +7,5 @@ gulp.task('css-lint', function() {
 });
 
 gulp.task('lint', ['css-lint']);
+
+gulp.task('default', ['lint']);
