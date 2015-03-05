@@ -3,5 +3,6 @@ node_js:
   - "0.11"
   - "0.10"
 before_script:
+  - gem install scss-lint
   - npm install -g gulp
 script: gulp
