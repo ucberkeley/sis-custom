@@ -24,6 +24,6 @@
   "homepage": "https://github.com/christianv/sis-custom",
   "devDependencies": {
     "gulp": "^3.8.11",
-    "gulp-scss-lint": "^0.1.7"
+    "gulp-scss-lint": "^0.1.10"
   }
 }
