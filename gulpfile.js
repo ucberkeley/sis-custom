@@ -49,4 +49,4 @@ gulp.task('css-lint', function() {
 
 gulp.task('lint', ['css-lint']);
 
-gulp.task('default', ['css']);
+gulp.task('default', ['css', 'lint']);
