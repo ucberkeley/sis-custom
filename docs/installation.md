@@ -3,7 +3,7 @@
 1. Clone the repository
 
     ```bash
-    git clone https://github.com/christianv/sis-custom.git
+    git clone https://github.com/ucberkeley/sis-custom.git
     cd sis-custom
     ```
 

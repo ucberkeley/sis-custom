@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/christianv/sis-custom.git"
+    "url": "https://github.com/ucberkeley/sis-custom.git"
   },
   "keywords": [
     "SIS",
@@ -19,10 +19,11 @@
   "author": "Christian Vuerings <vueringschristian@gmail.com> (http://denbuzze.com)",
   "license": "ECL-2.0",
   "bugs": {
-    "url": "https://github.com/christianv/sis-custom/issues"
+    "url": "https://github.com/ucberkeley/sis-custom/issues"
   },
-  "homepage": "https://github.com/christianv/sis-custom",
+  "homepage": "https://github.com/ucberkeley/sis-custom",
   "devDependencies": {
+    "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-concat": "^2.5.2",
