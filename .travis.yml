@@ -1,7 +1,8 @@
 language: node_js
 sudo: false
 node_js:
-  - "0.11"
+# https://github.com/sass/node-sass/issues/490
+#  - "0.11"
   - "0.10"
 before_script:
   - gem install scss-lint
