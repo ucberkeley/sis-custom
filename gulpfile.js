@@ -16,6 +16,7 @@ var paths = {
   }
 }
 
+// The file names
 var names = {
   dist: {
     css: 'uc_sis.css'
