@@ -1,15 +1,16 @@
-.uc-prototype {
+.uc-prototype .ps_content {
+  box-sizing: border-box;
   color: $uc-color-text;
   font-family: Arial,sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
+  overflow: auto;
   padding: 20px;
 
-  // Hide the header on the page
-  .ps_header {
-    display: none;
+  *, *:before, *:after {
+    box-sizing: inherit;
   }
 
   // Headers
@@ -23,6 +24,8 @@
   }
 
   .ps_header-group {
+    border-bottom: 0;
+    color: $uc-color-text;
     font-size: 16px;
     font-weight: normal;
   }
@@ -43,7 +46,7 @@
     z-index: 1;
 
     &:before {
-      background: url("//f.cl.ly/items/1Z2I1t2x3u322k182d1y/select_arrow_20x28.svg") no-repeat, $uc-color-blue-light;
+      background: url("https://rawgit.com/ucberkeley/sis-custom/master/src/images/select_arrow_20x28.svg") no-repeat, $uc-color-blue-light;
       content: '';
       display: block;
       height: 100%;
@@ -54,11 +57,16 @@
       z-index: -1;
     }
 
+    .ps_box-control {
+      width: 100%;
+    }
+
     select {
       -moz-appearance: none;
       -webkit-appearance: none;
       background: transparent;
       border: 0;
+      box-shadow: none;
       color: $uc-color-white;
       cursor: pointer;
       font-size: 11px;
@@ -88,6 +96,10 @@
     max-width: 800px;
     width: 100%;
 
+    td {
+      padding: 0;
+    }
+
     table {
       margin: -5px;
 
@@ -103,11 +115,13 @@
 
           a {
             background: $uc-color-blue-light;
+            box-shadow: none;
             color: $uc-color-white;
             display: block;
             margin: 5px;
             padding: 40px 20px;
             text-decoration: none;
+            text-shadow: none;
 
             &:focus,
             &:hover {
@@ -131,9 +145,13 @@
   .uc-table-appointment table {
     width: 100%;
 
+    th, td {
+      padding: 0;
+    }
+
     table {
       .ps_box-button {
-        margin-top: 30px;
+        margin-top: 15px;
         text-align: left;
 
         &:after,
@@ -150,11 +168,13 @@
           background: $uc-color-blue-light;
           border: 1px solid $uc-color-blue-dark;
           border-radius: 5px;
+          box-shadow: none;
           color: $uc-color-white;
           display: inline-block;
           font-size: 13px;
           padding: 5px 15px;
           text-decoration: none;
+          text-shadow: none;
 
           &:focus,
           &:hover {
@@ -172,9 +192,18 @@
         display: block;
         padding: 10px 5px;
 
+        &:not([id]) {
+          display: none;
+        }
+
         .ps_box-checkbox {
           clear: both;
           display: block;
+
+          .psc_off_container,
+          .psc_on_container {
+            transform: none !important;
+          }
 
           &:first-child {
             margin-top: 10px;
@@ -200,12 +229,14 @@
 
         input[type="text"] {
           border: 0;
+          box-shadow: none;
           font-size: 13px;
         }
 
         label {
           float: left;
           font-size: 13px;
+          font-weight: normal;
           padding: 1px;
         }
 
@@ -260,6 +291,10 @@
     border-radius: 10px;
     margin-top: 10px;
     padding: 10px;
+
+    .ps_box-text {
+      margin-bottom: 0;
+    }
 
     &:before {
       color: $uc-color-text;
