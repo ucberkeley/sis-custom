@@ -9,7 +9,9 @@
   overflow: auto;
   padding: 20px;
 
-  *, *:before, *:after {
+  *,
+  *:before,
+  *:after {
     box-sizing: inherit;
   }
 
@@ -145,7 +147,8 @@
   .uc-table-appointment table {
     width: 100%;
 
-    th, td {
+    td,
+    th {
       padding: 0;
     }
 

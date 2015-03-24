@@ -11,7 +11,7 @@ linters:
   SelectorDepth:
     enabled: false
   SelectorFormat:
-    class_convention: ^(uc\-|ps(_|-)|psc_)[a-zA-Z0-9\-]+$
+    class_convention: ^(uc\-|ps(_|-)|psc_)[a-zA-Z0-9\-_]+$
   StringQuotes:
     enabled: false
   QualifyingElement:
