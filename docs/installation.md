@@ -19,3 +19,9 @@
     ```
     gulp
     ```
+
+    1. Watch for changes
+
+        ```
+        gulp --watch
+        ```
