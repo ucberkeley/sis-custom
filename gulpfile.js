@@ -74,4 +74,6 @@ gulp.task('lint', ['css-lint']);
 
 gulp.task('build', ['css']);
 
+gulp.watch(paths.src.scss, ['css']);
+
 gulp.task('default', ['build', 'lint']);
