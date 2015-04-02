@@ -3,11 +3,12 @@
 
   var api = require('./api.js');
 
-
   var params = api.util.urlParams();
 
-  if (params.ucFrom && params.ucFromLink) {
-
+  var checkParams = function() {
+    if (!params.ucFrom && !params.ucFromLink) {
+      return;
+    }
     // Make sure the back-button is actually shown
     var backContainer = document.querySelector('.ps_button_backnav');
     backContainer.classList.remove('psc_disabled');
@@ -21,5 +22,9 @@
     // Hide the Campus solutions navigation
     var nav = document.querySelector('.ps_actions_cont');
     nav.style.display = 'none';
-  }
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    checkParams();
+  });
 })();
