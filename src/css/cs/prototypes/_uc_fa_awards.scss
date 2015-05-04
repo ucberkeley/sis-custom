@@ -1,0 +1,141 @@
+.uc-fa-awards .ps_content .ps_pagecontainer .ps_pspagecontainer .uc-content {
+  box-sizing: border-box;
+  color: $uc-color-text;
+  font-family: Arial,sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  overflow: auto;
+  padding: 20px;
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .uc-header-group {
+    background-color: $uc-color-grey;
+    padding-bottom: 45px;
+    padding-top: 15px;
+
+
+    .uc-header-left {
+      float: left;
+      padding-left: 5px;
+      width: 50%;
+
+      .uc-pagetitle-text {
+        color: $uc-color-text;
+        font-family: "Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.4;
+      }
+    }
+
+    .uc-header-right {
+      float: left;
+      padding: 5px;
+      width: 50%;
+
+      .uc-dropdown {
+        padding: 5px;
+
+        .ps_box-control {
+          float: right;
+        }
+      }
+    }
+  }
+
+  .uc-body-group {
+    clear: both;
+
+    .uc-aid-summary-group {
+
+      .uc-aid-summary-middle-group,
+      .uc-aid-summary-left-group,
+      .uc-aid-summary-right-group {
+        float: left;
+        padding-left: 5px;
+        width: 25%;
+      }
+
+      .uc-aid-summary-left-group {
+        width: 50%;
+      }
+
+      .ps_header-group {
+        border-bottom: 0;
+        color: $uc-color-grey-dark;
+        font-size: 18px;
+        font-weight: normal;
+        margin-bottom: 0;
+        padding-top: 20px;
+      }
+
+      .ps_content-group {
+        border-bottom: 0;
+        color: $uc-color-text;
+        float: left;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .ps_box-label {
+        display: none;
+      }
+
+      .ps_box-value {
+        margin-top: -5px;
+      }
+    }
+
+    .uc-aid-group {
+      clear: both;
+      padding-left: 5px;
+
+      .ps_header-group {
+        border-bottom: 0;
+        color: $uc-color-text;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 0;
+        padding-top: 20px;
+      }
+
+      .ps_content-group {
+        border: 0;
+
+        .uc-aid-detail-gift-group,
+        .uc-aid-detail-loan-group {
+          border: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    .uc-aid-total-group {
+      .ps_box-label {
+        float: left;
+        width: 90%;
+      }
+
+      .ps_box-value {
+        float: right;
+        font-size: 14px;
+        font-weight: bold;
+        padding-right: 10px;
+        text-align: right;
+        width: 10%;
+      }
+    }
+  }
+
+  .uc-footer-group {
+    clear: both;
+  }
+}
