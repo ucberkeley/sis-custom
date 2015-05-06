@@ -14,6 +14,12 @@
     npm install -g gulp
     ```
 
+1. Install SCSS (for linting)
+
+    ``` bash
+    gem install scss_lint
+    ```
+
 1. Run the build
 
     ```
