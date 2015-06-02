@@ -2,7 +2,6 @@ var argv = require('minimist')(process.argv.slice(2));
 var concat = require('gulp-concat');
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
-var scsslint = require('gulp-scss-lint');
 
 // Is the current build running on travis?
 var onTravis = !!process.env.TRAVIS;
@@ -54,6 +53,8 @@ gulp.task('css', function() {
  * Run the CSS Linter on the CSS files
  */
 gulp.task('css-lint', function() {
+  var scsslint = require('gulp-scss-lint');
+
   return gulp.src(paths.src.scss)
     .pipe(scsslint())
     // Only fail the build when running on Travis
@@ -113,4 +114,5 @@ if (argv.watch) {
   gulp.watch(paths.src.scss, ['css']);
 }
 
-gulp.task('default', ['build-clean', 'build', 'lint']);
+gulp.task('default', ['build-clean', 'build']);
+gulp.task('prod', ['build-clean', 'build', 'lint']);

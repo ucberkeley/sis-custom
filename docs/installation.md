@@ -31,3 +31,9 @@
         ```
         gulp --watch
         ```
+
+    1. Watch for changes and lint
+
+        ```
+        gulp prod --watch
+        ```
