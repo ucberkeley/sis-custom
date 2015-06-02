@@ -7,4 +7,4 @@ node_js:
 before_script:
   - gem install scss-lint
   - npm install -g gulp
-script: gulp
+script: gulp prod
