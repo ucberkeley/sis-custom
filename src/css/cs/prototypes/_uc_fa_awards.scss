@@ -1,6 +1,6 @@
 .uc-fa-awards .ps_content .ps_pagecontainer .ps_pspagecontainer .uc-content {
   box-sizing: border-box;
-  color: $uc-color-text;
+  color: $uc-color-grey-3;
   font-family: Arial,sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -16,7 +16,7 @@
   }
 
   .uc-header-group {
-    background-color: $uc-color-grey;
+    background-color: $uc-color-grey-e;
     padding-bottom: 45px;
     padding-top: 15px;
 
@@ -27,7 +27,7 @@
       width: 50%;
 
       .uc-pagetitle-text {
-        color: $uc-color-text;
+        color: $uc-color-grey-3;
         font-family: "Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;
         font-size: 22px;
         font-style: normal;
@@ -70,7 +70,7 @@
 
       .ps_header-group {
         border-bottom: 0;
-        color: $uc-color-grey-dark;
+        color: $uc-color-grey-a;
         font-size: 18px;
         font-weight: normal;
         margin-bottom: 0;
@@ -79,7 +79,7 @@
 
       .ps_content-group {
         border-bottom: 0;
-        color: $uc-color-text;
+        color: $uc-color-grey-3;
         float: left;
         font-size: 18px;
         font-weight: bold;
@@ -100,7 +100,7 @@
 
       .ps_header-group {
         border-bottom: 0;
-        color: $uc-color-text;
+        color: $uc-color-grey-3;
         font-size: 14px;
         font-weight: bold;
         margin-bottom: 0;
