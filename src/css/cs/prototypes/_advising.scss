@@ -1,6 +1,6 @@
 .uc-prototype .ps_content {
   box-sizing: border-box;
-  color: $uc-color-text;
+  color: $uc-color-grey-3;
   font-family: Arial,sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -17,7 +17,7 @@
 
   // Headers
   .uc-header-2 {
-    color: $uc-color-text;
+    color: $uc-color-grey-3;
     font-family: "Helvetica Neue",Helvetica,Helvetica,Arial,sans-serif;
     font-size: 22px;
     font-style: normal;
@@ -27,7 +27,7 @@
 
   .ps_header-group {
     border-bottom: 0;
-    color: $uc-color-text;
+    color: $uc-color-grey-3;
     font-size: 16px;
     font-weight: normal;
   }
@@ -77,7 +77,7 @@
       width: 100%;
 
       option {
-        color: $uc-color-text;
+        color: $uc-color-grey-3;
       }
 
       &::-ms-expand {
@@ -131,7 +131,7 @@
             }
 
             &[disabled="disabled"] {
-              background: $uc-color-grey;
+              background: $uc-color-grey-e;
             }
           }
         }
@@ -191,7 +191,7 @@
       }
 
       tr {
-        border-bottom: 1px solid $uc-color-grey;
+        border-bottom: 1px solid $uc-color-grey-e;
         display: block;
         padding: 10px 5px;
 
@@ -264,7 +264,7 @@
 
           &:nth-child(5) {
             input[type="text"] {
-              color: $uc-color-grey;
+              color: $uc-color-grey-e;
             }
           }
 
@@ -300,7 +300,7 @@
     }
 
     &:before {
-      color: $uc-color-text;
+      color: $uc-color-grey-3;
       content: " ✔";
       float: left;
       margin-right: 5px;
