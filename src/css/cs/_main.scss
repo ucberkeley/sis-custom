@@ -1,7 +1,8 @@
 // This is the main CSS file
 // We base everything on how it looks like in the kitchensink:
 // http://bit.ly/sis-kitchen-sink
-.ps_main {
+.ps_main,
+.ps_pagecontainer {
   * {
     font-family: Arial, Helvetica, sans-serif;
     line-height: normal;
@@ -45,6 +46,7 @@
 
   label.ps-label {
     color: $uc-color-grey-6;
+    cursor: pointer;
     font-size: 14px;
     font-weight: bold;
   }
@@ -118,8 +120,11 @@
     &,
     &:link {
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         background-color: $uc-color-blue-light;
+        background-image: none;
+        box-shadow: none;
         color: $uc-color-white;
         text-decoration: none;
       }
@@ -168,14 +173,66 @@
     }
   }
 
-  table {
-    border: 1px solid $uc-color-grey-e;
-    border-collapse: separate;
-    font-size: 14px;
+  .uc-fluid-table {
+    overflow: auto;
 
-    th {
-      background-color: $uc-color-grey-e;
-      vertical-align: bottom;
+    >.ps_header-group {
+      display: none;
+    }
+
+    table {
+      border: 1px solid $uc-color-grey-e;
+      border-collapse: separate;
+      font-size: 14px;
+
+      th {
+        background-color: $uc-color-grey-e;
+        vertical-align: bottom;
+      }
+
+      .psc_image_only {
+        .ps-button {
+          img {
+            filter: brightness(3);
+          }
+        }
+      }
+    }
+  }
+
+
+  // Remove the 33% width from all the labels
+  .ps_box-label {
+    width: auto;
+  }
+
+  //
+  // Custom UC Classes
+  //
+  .uc-fluid-italic {
+    font-style: italic;
+  }
+
+  // Show the labels on top of the controls
+  .uc-fluid-label-top {
+
+    .ps_box-label {
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    .ps_box-value,
+    .ps_box-control {
+      display: block;
+    }
+  }
+
+  // For the associated labels
+  .uc-fluid-label-associated {
+    margin-top: -5px;
+
+    .ps_box-label {
+      display: none;
     }
   }
 }
