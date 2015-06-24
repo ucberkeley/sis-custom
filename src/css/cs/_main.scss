@@ -175,9 +175,11 @@
 
   .uc-fluid-table {
     overflow: auto;
-    &>.ps_header-group {
+
+    >.ps_header-group {
       display: none;
     }
+
     table {
       border: 1px solid $uc-color-grey-e;
       border-collapse: separate;
