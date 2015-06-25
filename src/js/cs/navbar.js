@@ -42,13 +42,20 @@ var addCalCentralBar = function(params) {
   prependChild(body, calcentralBar);
 };
 
+var addCalCentralCSSClass = function() {
+  var body = document.querySelector('body');
+  body.className += 'uc-calcentral-header-added';
+};
+
 var loadBar = function() {
   var params = api.util.urlParams();
   var checkParams = (params.ucFrom && params.ucFromLink);
 
-  if (checkParams) {
+  // Make sure we check the params and only add it when it hasn't been added before
+  if (checkParams && !document.querySelector('.uc-calcentral-header')) {
     removeNativeBar();
     addCalCentralBar(params);
+    addCalCentralCSSClass();
   }
 };
 

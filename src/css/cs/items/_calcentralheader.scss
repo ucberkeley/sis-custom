@@ -38,3 +38,11 @@ $uc-calcentral-blue-blue: #2b6281;
     }
   }
 }
+
+// Added to the body element
+// Make sure we avoid 2 scrollbars
+.uc-calcentral-header-added {
+  .PSForm {
+    height: auto;
+  }
+}
