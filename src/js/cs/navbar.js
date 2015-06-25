@@ -2,7 +2,7 @@
 
 var api = require('./api');
 
-var isBarLoaded = false;
+var interval;
 
 var prependChild = function(parent, child) {
   parent.insertBefore(child, parent.firstChild);
@@ -43,10 +43,6 @@ var addCalCentralBar = function(params) {
 };
 
 var loadBar = function() {
-  if (isBarLoaded) {
-    return;
-  }
-  isBarLoaded = true;
   var params = api.util.urlParams();
   var checkParams = (params.ucFrom && params.ucFromLink);
 
@@ -56,6 +52,16 @@ var loadBar = function() {
   }
 };
 
-// We need both, 1 for testing and the other one when it's loaded on the page
-loadBar();
-document.addEventListener('DOMContentLoaded', loadBar);
+var stopInterval = function() {
+  clearInterval(interval);
+};
+
+var checkBody = function() {
+  var body = document.querySelector('body');
+  if (body) {
+    stopInterval();
+    loadBar();
+  }
+};
+
+interval = setInterval(checkBody, 100);
