@@ -1,0 +1,40 @@
+$uc-calcentral-blue-dark: #002e5b;
+$uc-calcentral-blue-blue: #2b6281;
+
+.uc-calcentral-header {
+
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .uc-calcentral-logo-container {
+    background: $uc-calcentral-blue-dark;
+
+    .uc-calcentral-logo {
+      background: url('/uc_cust/data/portal/images/calcentral_logo_340x35.svg') no-repeat left center;
+      background-size: 200px 30px;
+      display: block;
+      height: 35px;
+      margin-left: 15px;
+      text-indent: -9999px;
+      width: 100%;
+    }
+  }
+
+  .uc-calcentral-back-container {
+    background: $uc-calcentral-blue-blue;
+
+    .uc-calcentral-back {
+      background: url('/uc_cust/data/portal/images/arrow-circle-o-left.svg') no-repeat left center;
+      background-size: 15px;
+      display: block;
+      font-size: 14px;
+      margin-left: 15px;
+      padding: 10px 0 9px 20px;
+    }
+
+    a {
+      color: $uc-color-white;
+    }
+  }
+}
