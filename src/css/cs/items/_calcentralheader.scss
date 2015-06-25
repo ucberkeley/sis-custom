@@ -1,5 +1,6 @@
 $uc-calcentral-blue-dark: #002e5b;
 $uc-calcentral-blue-blue: #2b6281;
+$uc-calcentral-gold: #f1a91e;
 
 .uc-calcentral-header {
 
@@ -13,11 +14,18 @@ $uc-calcentral-blue-blue: #2b6281;
     .uc-calcentral-logo {
       background: url('/uc_cust/data/portal/images/calcentral_logo_340x35.svg') no-repeat left center;
       background-size: 200px 30px;
+      border-bottom: 2px solid transparent;
       display: block;
       height: 35px;
       margin-left: 15px;
       text-indent: -9999px;
-      width: 100%;
+      width: 200px;
+
+      &:focus,
+      &:hover {
+        border-bottom: 2px solid $uc-calcentral-gold;
+        opacity: .9;
+      }
     }
   }
 
