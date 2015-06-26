@@ -50,6 +50,8 @@ $uc-calcentral-gold: #f1a91e;
 // Added to the body element
 // Make sure we avoid 2 scrollbars
 .uc-calcentral-header-added {
+  margin: 0;
+
   .PSForm {
     height: auto;
   }
