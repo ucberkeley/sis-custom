@@ -9,8 +9,11 @@ var onTravis = !!process.env.TRAVIS;
 // The paths
 var paths = {
   src: {
-    scss: 'src/css/cs/**/*.scss',
-    js: './src/js/cs/main.js'
+    cs: {
+      scss: 'src/css/cs/**/*.scss',
+      js: './src/js/cs/main.js'
+    },
+    loadFiles: './src/js/loadfiles/**/*.js'
   },
   dist: {
     main: 'dist',
@@ -22,7 +25,8 @@ var paths = {
 var names = {
   dist: {
     css: 'sis_cs.css',
-    js: 'sis_cs.js'
+    js: 'sis_cs.js',
+    loadFiles: 'sis_loadfiles.js'
   }
 }
 
@@ -38,7 +42,7 @@ gulp.task('css', function() {
   // Convert the .scss files into .css
   var sass = require('gulp-sass');
 
-  return gulp.src(paths.src.scss)
+  return gulp.src(paths.src.cs.scss)
     .pipe(sass())
     .pipe(autoprefixer({
       cascade: false
@@ -55,10 +59,22 @@ gulp.task('css', function() {
 gulp.task('css-lint', function() {
   var scsslint = require('gulp-scss-lint');
 
-  return gulp.src(paths.src.scss)
+  return gulp.src(paths.src.cs.scss)
     .pipe(scsslint())
     // Only fail the build when running on Travis
     .pipe(gulpif(onTravis, scsslint.failReporter()));
+});
+
+gulp.task('load-files', function() {
+  var uglify = require('gulp-uglify');
+
+  return gulp.src(paths.src.loadFiles)
+    // Combine the files
+    .pipe(concat(names.dist.loadFiles))
+    // Minify the file
+    .pipe(uglify())
+    // Output to the correct directory
+    .pipe(gulp.dest(paths.dist.main));
 });
 
 // Setup the JavaScript task
@@ -66,7 +82,7 @@ var gutil = require('gulp-util');
 var browserify = require('browserify');
 var watchify = require('watchify');
 var bundler = browserify({
-  entries: paths.src.js,
+  entries: paths.src.cs.js,
   transform: 'brfs'
 });
 
@@ -108,10 +124,11 @@ gulp.task('build-clean', function(callback) {
 
 gulp.task('lint', ['css-lint']);
 
-gulp.task('build', ['css', 'js']);
+gulp.task('build', ['css', 'js', 'load-files']);
 
 if (argv.watch) {
-  gulp.watch(paths.src.scss, ['css']);
+  gulp.watch(paths.src.cs.scss, ['css']);
+  gulp.watch(paths.src.loadFiles, ['load-files']);
 }
 
 gulp.task('default', ['build-clean', 'build']);
