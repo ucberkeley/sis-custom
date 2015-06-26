@@ -71,4 +71,4 @@ var checkBody = function() {
   }
 };
 
-interval = setInterval(checkBody, 100);
+interval = setInterval(checkBody, 1);
