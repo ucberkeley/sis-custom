@@ -3,6 +3,8 @@ exclude:
   - 'dist/**'
 
 linters:
+  IdSelector:
+    exclude: 'src/css/cs/items/_mainheader.scss'
   ImportantRule:
     enabled: false
   NameFormat:
@@ -13,6 +15,7 @@ linters:
     enabled: false
   SelectorFormat:
     class_convention: ^(uc\-|ps(_|-)|psc_|PSForm)[a-zA-Z0-9\-_]*$
+    exclude: 'src/css/cs/items/_mainheader.scss'
   StringQuotes:
     enabled: false
   QualifyingElement:
