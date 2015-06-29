@@ -1,30 +1,32 @@
 // Colors from http://www.berkeley.edu/brand/img/colors/WebColor_accessible_AA_swatches.pdf
 $uc-branding-berkeley-blue: #003262;
-$uc-branding-founders-rock: #3b7ea1;
+$uc-branding-berkeley-blue-dark: #02263f;
 
-#ptbr_header_container #pthdr2container {
-  background-color: $uc-branding-berkeley-blue;
-  background-image: none;
-}
+.ptprtlcontainer {
+  #ptbr_header_container #pthdr2container {
+    background-color: $uc-branding-berkeley-blue;
+    background-image: none;
+  }
 
-#pthdr2navbarlinks #pthdr2navbar {
-  background-color: $uc-branding-berkeley-blue;
-  background-image: none;
-}
+  #pthdr2navbarlinks #pthdr2navbar {
+    background-color: $uc-branding-berkeley-blue;
+    background-image: none;
+  }
 
-#ptdropdownmenu {
-  background-color: $uc-branding-founders-rock;
-  background-image: none;
-}
+  #ptdropdownmenu {
+    background-color: $uc-branding-berkeley-blue-dark;
+    background-image: none;
+  }
 
-#pthdr2container #pthdr2logoswan {
-  background: url('/uc_cust/data/portal/images/berkeley_logo_white_290x90.svg') no-repeat !important;
-  background-size: contain !important;
-  height: 45px;
-  margin: 8px 5px;
-  width: 140px;
+  #pthdr2container #pthdr2logoswan {
+    background: url('/uc_cust/data/portal/images/berkeley_logo_white_290x90.svg') no-repeat !important;
+    background-size: contain !important;
+    height: 45px;
+    margin: 8px 5px;
+    width: 140px;
 
-  &::before {
-    content: " " !important;
+    &::before {
+      content: " " !important;
+    }
   }
 }
