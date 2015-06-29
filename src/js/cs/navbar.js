@@ -44,7 +44,7 @@ var addCalCentralBar = function(params) {
 
 var addCalCentralCSSClass = function() {
   var body = document.querySelector('body');
-  body.className += 'uc-calcentral-header-added';
+  body.className += ' uc-calcentral-header-added';
 };
 
 var loadBar = function() {
