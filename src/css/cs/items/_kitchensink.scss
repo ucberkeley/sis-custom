@@ -173,6 +173,9 @@
   }
 
   .uc-fluid-table {
+    // We need this clear & extra margin because of a scrollbar bug on Google Chrome on Windows
+    clear: both;
+    margin-bottom: 20px;
     overflow: auto;
 
     >.ps_header-group {
