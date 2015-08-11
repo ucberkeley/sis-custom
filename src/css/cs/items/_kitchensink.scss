@@ -237,4 +237,54 @@
       display: none;
     }
   }
+
+  // Custom widths, PS delivers only up to 100px psc_width-100px
+  @for $i from 1 through 40 {
+    $width: 100 + $i * 5px;
+
+    .uc-width-#{$width} {
+      width: $width;
+    }
+  }
+
+  // Colors (references _colors.scss)
+  .uc-color-blue-dark {
+    color: $uc-color-blue-dark;
+  }
+
+  .uc-color-blue-light {
+    color: $uc-color-blue-light;
+  }
+
+  .uc-color-green {
+    color: $uc-color-green;
+  }
+
+  .uc-color-grey-3 {
+    color: $uc-color-grey-3;
+  }
+
+  .uc-color-grey-6 {
+    color: $uc-color-grey-6;
+  }
+
+  .uc-color-grey-9 {
+    color: $uc-color-grey-9;
+  }
+
+  .uc-color-grey-a {
+    color: $uc-color-grey-a;
+  }
+
+  .uc-color-grey-c {
+    color: $uc-color-grey-c;
+  }
+
+  .uc-color-grey-e {
+    color: $uc-color-grey-e;
+  }
+
+  .uc-color-white {
+    color: $uc-color-white;
+  }
 }
