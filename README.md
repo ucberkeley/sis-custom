@@ -6,6 +6,10 @@ Custom JavaScript, CSS & images for the SIS project
 
 * [Installation](docs/installation.md)
 
+## Build files
+
+* As soon as we merge a pull request, we automatically build the files to [sis-custom-build](https://sis-custom-build.herokuapp.com/dist).
+
 ## Apply the changes to SIS
 
 * [Update a PeopleSoft SIS environment with custom files](docs/update_sis.md)
