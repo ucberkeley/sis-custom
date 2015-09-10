@@ -12,12 +12,12 @@
       return;
     }
 
-    var ref = window.document.getElementsByTagName('script')[0];
-    var script = window.document.createElement('script');
-    script.src = src;
-    script.id = id;
-    ref.parentNode.insertBefore(script, ref);
-    return script;
+    /**
+     * We need to be a bit evil here to avoid the flickering of the header
+     * https://jira.berkeley.edu/browse/SISRP-7370
+     */
+    /* jshint evil: true */
+    document.write('<script type="text/javascript" id="' + id + '" src="' + src + '"></script>');
   };
 
   // Random number for cache busting
