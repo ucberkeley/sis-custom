@@ -19,7 +19,7 @@ var paths = {
     main: 'dist',
     images: 'dist/uc_images'
   }
-}
+};
 
 // The file names
 var names = {
@@ -28,7 +28,7 @@ var names = {
     js: 'sis_cs.js',
     loadFiles: 'sis_loadfiles.js'
   }
-}
+};
 
 /**
  * CSS Task
