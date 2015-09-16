@@ -272,6 +272,7 @@
   // Custom font-widths, PS does not deliver classes to allow different font-sizes
   @for $i from 10 through 25 {
     $width: $i * 1px;
+
     .uc-font-size-#{$i} {
       font-size: $width;
     }
