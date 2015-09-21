@@ -15,17 +15,16 @@
 
   .uc-fluid-table table {
     font-size: 11px;
+    table .ps_box-button a {
+      border-radius: 5px;
+      box-shadow: none;
+      display: inline-block;
+      font-size: 11px;
+      padding: 3px, 3px, 0, 3px;
+      text-decoration: none;
+      text-shadow: none; 
+    }
   }
-  
-  .ps_content .uc-fluid-table table table .ps_box-button a {
-    border-radius: 5px;
-    box-shadow: none;
-    display: inline-block;
-    font-size: 11px;
-    padding: 3px, 3px, 0, 3px;
-    text-decoration: none;
-    text-shadow: none; 
-   }
 }
 
 @media all and (max-width: 700px) {
