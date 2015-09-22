@@ -278,6 +278,31 @@
     }
   }
 
+  // Custom margin-widths, PS does not deliver classes to allow different font-sizes
+  @for $i from 100 through 300 {
+    $width: $i * 1px;
+
+    .uc-margin-#{$i}px {
+      margin: $width;
+    }
+
+    .uc-margin-bottom-#{$i}px {
+      margin-bottom: $width;
+    }
+
+    .uc-margin-top-#{$i}px {
+      margin-top: $width;
+    }
+
+    .uc-margin-left-#{$i}px {
+      margin-left: $width;
+    }
+
+    .uc-margin-right-#{$i}px {
+      margin-right: $width;
+    }
+  }
+
   // Colors (references _colors.scss)
   .uc-color-blue-dark {
     color: $uc-color-blue-dark;
