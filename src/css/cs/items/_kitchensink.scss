@@ -244,6 +244,7 @@
   }
 
   // Custom widths, PS delivers only up to 100px psc_width-100px
+  // Goes from 105px till 300px in 5px incements (105px, 110px, ...)
   @for $i from 1 through 40 {
     $width: 100 + $i * 5px;
 
@@ -254,6 +255,7 @@
 
   // Custom control widths, PS delivers only up to 100px psc_control-width100px
   // Custom widths, PS delivers only up to 100px psc_width-100px
+  // Goes from 105px till 320px in 5px incements (105px, 110px, ...)
   @for $i from 1 through 44 {
     $width: 100 + $i * 5px;
 
@@ -275,6 +277,32 @@
 
     .uc-font-size-#{$i} {
       font-size: $width;
+    }
+  }
+
+  // Custom margin-widths, PS does not deliver classes to allow different font-sizes
+  // Goes from 100px till 300px in 5px incements (100px, 105px, ...)
+  @for $i from 0 through 40 {
+    $amount: 100 + $i * 5px;
+
+    .uc-margin-#{$amount} {
+      margin: $amount;
+    }
+
+    .uc-margin-bottom-#{$amount} {
+      margin-bottom: $amount;
+    }
+
+    .uc-margin-top-#{$amount} {
+      margin-top: $amount;
+    }
+
+    .uc-margin-left-#{$amount} {
+      margin-left: $amount;
+    }
+
+    .uc-margin-right-#{$amount} {
+      margin-right: $amount;
     }
   }
 
