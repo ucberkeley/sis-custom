@@ -244,8 +244,8 @@
   }
 
   // Custom widths, PS delivers only up to 100px psc_width-100px
-  // Goes from 105px till 300px in 5px incements (105px, 110px, ...)
-  @for $i from 1 through 40 {
+  // Goes from 105px till 350px in 5px incements (105px, 110px, ...)
+  @for $i from 1 through 50 {
     $width: 100 + $i * 5px;
 
     .uc-width-#{$width} {
