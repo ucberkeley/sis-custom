@@ -316,15 +316,12 @@
   .uc-input-error {
     > .ps_box-control input[type="text"] {
       background-color: $uc-color-red;
-      background-image: none;
     }
   }
 
   .psc_error {
-    @media all {
       input::placeholder {
         color: $uc-color-white;
-      }
     }
   }
 
