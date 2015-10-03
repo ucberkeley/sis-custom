@@ -315,8 +315,8 @@
 
   .uc-input-error {
     > .ps_box-control input[type="text"] {
-      background-image: none;
       background-color: $uc-color-red;
+      background-image: none;
     }
   }
 
