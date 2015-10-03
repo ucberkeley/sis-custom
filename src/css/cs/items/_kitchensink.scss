@@ -271,6 +271,7 @@
     }
   }
 
+  // Align the text in the input boxes to the right
   .uc-input-align-right {
     > .ps_box-control input[type="text"] {
       text-align: right;
@@ -312,6 +313,18 @@
     }
   }
 
+  .uc-input-error {
+    > .ps_box-control input[type="text"] {
+      background-color: $uc-color-red;
+    }
+  }
+
+  .psc_error {
+    input::placeholder {
+      color: $uc-color-white;
+    }
+  }
+
   // Colors (references _colors.scss)
   .uc-color-blue-dark {
     color: $uc-color-blue-dark;
@@ -347,6 +360,10 @@
 
   .uc-color-grey-e {
     color: $uc-color-grey-e;
+  }
+
+  .uc-color-red {
+    color: $uc-color-red;
   }
 
   .uc-color-white {
