@@ -52,7 +52,7 @@ $uc-calcentral-gold: #f1a91e;
 .uc-calcentral-header-added {
   margin: 0;
 
-  .PSForm {
-    height: auto;
+  > .PSForm {
+    height: calc(100% - 72px);
   }
 }
