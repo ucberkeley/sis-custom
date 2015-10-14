@@ -1,10 +1,11 @@
 language: node_js
 sudo: false
 node_js:
-# https://github.com/sass/node-sass/issues/490
-#  - "0.11"
-  - "0.10"
+- '0.10'
 before_script:
-  - gem install scss-lint
-  - npm install -g gulp
+- gem install scss-lint
+- npm install -g gulp
 script: gulp prod
+notifications:
+  slack:
+    secure: dVdlEHQrMWX5d+tgMSrRr+S1GfOlgbYJOD+lFodBmFNM6+kh3d70gwXqnrkV4cRjQVf/0z4I/N4dIyuXgVvHh9DJaYmsRit8RMihr8cquuEOGOcKbm+RRbGiM7QwvrCYBj/0cj84oX58kK54OSDOueGcrZFqc1vGfXP7EnU6iqM=
