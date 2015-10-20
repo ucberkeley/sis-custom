@@ -13,7 +13,7 @@ $uc-calcentral-gold: #f1a91e;
 
     .uc-calcentral-logo {
       background: url('/uc_cust/data/portal/images/calcentral_logo_340x35.svg') no-repeat left center;
-      background-size: 200px 30px;
+      background-size: contain;
       border-bottom: 2px solid transparent;
       display: block;
       height: 35px;
