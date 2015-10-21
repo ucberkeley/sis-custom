@@ -253,6 +253,15 @@
     }
   }
 
+  @for $i from 1 through 20 {
+    $width-label: $i * 5pct;
+    $width: $i * 5%;
+
+    .uc-width-#{$width-label} {
+      width: $width;
+    }
+  }
+
   // Custom control widths, PS delivers only up to 100px psc_control-width100px
   // Custom widths, PS delivers only up to 100px psc_width-100px
   // Goes from 105px till 320px in 5px incements (105px, 110px, ...)
