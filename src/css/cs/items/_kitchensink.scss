@@ -334,6 +334,26 @@
     }
   }
 
+  // Icons displayed in the subpage UC_STATUS_MSG_SBF
+  .uc-status-icon {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 16px;
+    width: 16px;
+  }
+
+  .uc-status-icon-success {
+    background-image: url('/uc_cust/data/portal/images/uc-icon-success.svg');
+  }
+
+  .uc-status-icon-error {
+    background-image: url('/uc_cust/data/portal/images/uc-icon-error.svg');
+  }
+
+  .uc-status-icon-warning {
+    background-image: url('/uc_cust/data/portal/images/uc-icon-warning.svg');
+  }
+
   // Colors (references _colors.scss)
   .uc-color-blue-dark {
     color: $uc-color-blue-dark;
