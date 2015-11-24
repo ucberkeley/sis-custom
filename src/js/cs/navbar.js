@@ -53,7 +53,8 @@ var decodeParam = function(param) {
  * @param {Object} params Parameters passed through from the URL
  */
 var createCalCentralBar = function(params) {
-  var text = decodeParam(params.ucFromText) || 'CalCentral';
+  var ucFromText = decodeParam(params.ucFromText);
+  var text = ucFromText ? 'Return to ' + ucFromText : 'Return';
   var ucFromLink = decodeParam(params.ucFromLink);
   var calcentralBar = '<div class="uc-calcentral-logo-container">' +
     '<a href="' + ucFromLink + '" class="uc-calcentral-logo">' +
@@ -62,7 +63,7 @@ var createCalCentralBar = function(params) {
   '</div>' +
   '<div class="uc-calcentral-back-container">' +
     '<a href="' + ucFromLink + '" class="uc-calcentral-back">' +
-      'Return to ' + text +
+      text +
     '</a>' +
   '</div>';
 
