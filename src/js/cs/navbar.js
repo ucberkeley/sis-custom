@@ -5,6 +5,18 @@ var api = require('./api');
 var interval;
 
 /**
+ * See whether the current page is loaded within an iframe
+ * http://stackoverflow.com/a/326076
+ */
+var isInIframe = function() {
+  try {
+    return window.self !== window.top;
+  } catch (e) {
+    return true;
+  }
+};
+
+/**
  * Prepend an HTML node to another one
  */
 var prependChild = function(parent, child) {
@@ -87,7 +99,8 @@ var loadBar = function() {
   var checkParams = (params.ucFrom && params.ucFromLink);
 
   // Make sure we check the params and only add it when it hasn't been added before
-  if (checkParams && !document.querySelector('.uc-calcentral-header')) {
+  // Also make sure we don't load the bar within a pop-up (iframe)
+  if (checkParams && !document.querySelector('.uc-calcentral-header') && !isInIframe()) {
     removeNativeBar();
     addCalCentralBar(params);
     addCalCentralCSSClass();
