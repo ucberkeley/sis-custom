@@ -57,7 +57,7 @@ var createCalCentralBar = function(params) {
   var ucFromLink = decodeParam(params.ucFromLink);
   var calcentralBar = '<div class="uc-calcentral-logo-container">' +
     '<a href="' + ucFromLink + '" class="uc-calcentral-logo">' +
-      'Back to CalCentral' +
+      'Return' +
     '</a>' +
   '</div>' +
   '<div class="uc-calcentral-back-container">' +
