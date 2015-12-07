@@ -10,13 +10,18 @@
         margin: 10px;
         width: 30%;
       }
+      .uc-planner-grid {
+        .ps_box-grid-header {
+          display: none;
+        }
+      }
     }
   }
 
   .uc-fluid-table table {
     font-size: 11px;
 
-    table .ps_box-button a {
+    .ps_box-button a {
       border-radius: 5px;
       box-shadow: none;
       display: inline-block;
@@ -26,7 +31,7 @@
       text-shadow: none;
     }
 
-    table .ps_box-dropdown select {
+    .ps_box-dropdown select {
       font-size: 11px;
     }
   }
