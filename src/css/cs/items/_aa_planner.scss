@@ -16,6 +16,10 @@
           display: none;
         }
       }
+      
+      .ps_box-longedit {
+        width: 300px;
+      }
     }
   }
 
@@ -38,7 +42,7 @@
   }
 }
 
-@media all and (max-width: 700px) {
+@media all and (max-width: 1000px) {
   .uc-planner {
     .uc-planner-detail {
       .uc-planner-detail-term {
