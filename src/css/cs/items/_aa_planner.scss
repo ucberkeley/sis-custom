@@ -11,14 +11,27 @@
         width: 30%;
       }
       
+      div {
+        border-radius: 5px;
+        box-shadow: none;
+        text-decoration: none;
+        text-shadow: none;
+      }
+      
       .uc-planner-grid {
         .ps_box-grid-header {
           display: none;
         }
       }
       
-      .ps_box-longedit {
-        width: 300px;
+      .ps_box-button a {
+        border-radius: 5px;
+        box-shadow: none;
+        display: inline-block;
+        font-size: 11px;
+        padding: 3px, 3px, 0, 3px;
+        text-decoration: none;
+        text-shadow: none;
       }
     }
   }
