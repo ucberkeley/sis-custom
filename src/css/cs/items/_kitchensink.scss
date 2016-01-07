@@ -295,7 +295,7 @@
     }
   }
 
-  // Custom margin-widths, PS does not deliver classes to allow different font-sizes
+  // Custom margin-widths, PS does not deliver classes to allow different larger margins
   // Goes from 100px till 300px in 5px incements (100px, 105px, ...)
   @for $i from 0 through 40 {
     $amount: 100 + $i * 5px;
@@ -317,6 +317,32 @@
     }
 
     .uc-margin-right-#{$amount} {
+      margin-right: $amount;
+    }
+  }
+
+  // Custom margin-widths, PS does not deliver classes to allow negative margins
+  // Goes from -1px till -20px in -1px incements (-1px, -2px, ...)
+  @for $i from 1 through 20 {
+    $amount: -1px * $i;
+
+    .uc-margin-negative-#{$amount} {
+      margin: $amount;
+    }
+
+    .uc-margin-bottom-negative-#{$amount} {
+      margin-bottom: $amount;
+    }
+
+    .uc-margin-top-negative-#{$amount} {
+      margin-top: $amount;
+    }
+
+    .uc-margin-left-negative-#{$amount} {
+      margin-left: $amount;
+    }
+
+    .uc-margin-right-negative-#{$amount} {
       margin-right: $amount;
     }
   }
