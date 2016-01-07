@@ -347,6 +347,10 @@
     }
   }
 
+  .uc-white-space-pre-wrap {
+    white-space: pre-wrap;
+  }
+
   .uc-input-error {
     > .ps_box-control input[type="text"] {
       background-color: $uc-color-red;
