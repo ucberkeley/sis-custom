@@ -326,23 +326,23 @@
   @for $i from 1 through 20 {
     $amount: -1px * $i;
 
-    .uc-margin-negative-#{$amount} {
+    .uc-margin-negative#{$amount} {
       margin: $amount;
     }
 
-    .uc-margin-bottom-negative-#{$amount} {
+    .uc-margin-bottom-negative#{$amount} {
       margin-bottom: $amount;
     }
 
-    .uc-margin-top-negative-#{$amount} {
+    .uc-margin-top-negative#{$amount} {
       margin-top: $amount;
     }
 
-    .uc-margin-left-negative-#{$amount} {
+    .uc-margin-left-negative#{$amount} {
       margin-left: $amount;
     }
 
-    .uc-margin-right-negative-#{$amount} {
+    .uc-margin-right-negative#{$amount} {
       margin-right: $amount;
     }
   }
