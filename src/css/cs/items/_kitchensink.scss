@@ -347,6 +347,19 @@
     }
   }
 
+
+  // PS does not deliver a class to display a longedit box' labe  on the top of the field
+  .uc-longedit-label-top {
+    &.ps_box-edit.psc_wrappable:not(.psc_label-suppressed),
+    &.ps_box-dropdown.psc_wrappable:not(.psc_label-suppressed),
+    &.ps_box-longedit.psc_wrappable:not(.psc_label-suppressed) {
+      flex-direction: column;
+      > .ps_box-label {
+        text-align: left;
+      }
+    }
+  }
+
   .uc-white-space-pre-wrap {
     white-space: pre-wrap;
   }
