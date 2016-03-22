@@ -396,11 +396,13 @@
     background-image: url('/uc_cust/data/portal/images/uc-icon-warning.svg');
   }
 
-  // Visually hidden class that will allow us to provide text that only a screen reader
+  // Visually hidden class that will allow us to provide text that only a screen reader uses
   // to provide extra information to accessible users.  This class should be used when
   // embedding a link within a message catalog entry that displays text containing a link that
   // opens in a new window
-  // i.e <a href="http://financialaid.berkeley.edu/loans" target="_blank" data-added-new-window="true">Loans <span class="uc-visually-hidden" style="">Opens in new window</span></a>
+  // i.e <a href="http://financialaid.berkeley.edu/loans" target="_blank"
+  // data-added-new-window="true">Loans <span class="uc-visually-hidden">
+  // Opens in new window</span></a>
   .uc-visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);
