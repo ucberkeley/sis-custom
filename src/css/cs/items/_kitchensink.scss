@@ -400,8 +400,8 @@
   // to provide extra information to accessible users.  This class should be used when
   // embedding a link within a message catalog entry that displays text containing a link that
   // opens in a new window
-  // i.e <a href="http://financialaid.berkeley.edu/loans" target="_blank"
-  // data-added-new-window="true">Loans <span class="uc-visually-hidden">
+  // i.e <a href="http://financialaid.berkeley.edu/loans" target="_blank">Loans
+  // <span class="uc-visually-hidden">
   // Opens in new window</span></a>
   .uc-visually-hidden {
     border: 0;
