@@ -381,13 +381,12 @@
     border: 0;
     box-shadow: none;
     font-size: 16px;
-    width: 100%;
     font-weight: bold;
-    resize: none;
-    overflow: hidden;
-    outline: none;
     margin: 0;
-    height: calc(100%);
+    outline: none;
+    overflow: hidden;
+    resize: none;
+    width: 100%;
   }
 
   // Icons displayed in the subpage UC_STATUS_MSG_SBF
