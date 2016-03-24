@@ -376,6 +376,20 @@
     }
   }
 
+  // Style the text that appears in the HTMLArea on UC_STATUS_MSG_SBF
+  .uc-status-message {
+    border: 0;
+    box-shadow: none;
+    font-size: 16px;
+    width: 100%;
+    font-weight: bold;
+    resize: none;
+    overflow: hidden;
+    outline: none;
+    margin: 0;
+    height: calc(100%);
+  }
+
   // Icons displayed in the subpage UC_STATUS_MSG_SBF
   .uc-status-icon {
     background-repeat: no-repeat;
