@@ -382,7 +382,7 @@
     box-shadow: none;
     font-size: 16px;
     font-weight: bold;
-    margin: 0;
+    margin-bottom: 20px;
     outline: none;
     overflow: hidden;
     resize: none;
@@ -407,6 +407,36 @@
 
   .uc-status-icon-warning {
     background-image: url('/uc_cust/data/portal/images/uc-icon-warning.svg');
+  }
+
+  // Border Colors (references _colors.scss)
+  .uc-border-color-red {
+    border-color: $uc-color-red;
+  }
+
+  .uc-border-color-green {
+    border-color: $uc-color-green;
+  }
+
+  .uc-border-color-gold {
+    border-color: $uc-color-gold;
+  }
+
+  // Use box-shadow to mimic standard :focus (references _colors.scss)
+  .uc-border-box-shadow-red {
+    box-shadow: 0 0 5px $uc-color-red, inset 0 0 3px $uc-color-red;
+  }
+
+  .uc-border-box-shadow-green {
+    box-shadow: 0 0 5px $uc-color-green, inset 0 0 3px $uc-color-green;
+  }
+
+  .uc-border-box-shadow-gold {
+    box-shadow: 0 0 5px $uc-color-gold, inset 0 0 3px $uc-color-gold;
+  }
+
+  .uc-border-radius-3px {
+    border-radius: 3px;
   }
 
   // Visually hidden class that will allow us to provide text that only a screen reader uses
