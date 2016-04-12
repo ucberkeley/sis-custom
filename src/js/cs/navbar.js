@@ -85,6 +85,32 @@ var addCalCentralBar = function(params) {
 };
 
 /**
+ * Create the Berkeley bar
+ * Example URL:
+ * https://bcs-web-dev-03.is.berkeley.edu:8443/psc/bcsdev/EMPLOYEE/HRMS/c/COMMUNITY_ACCESS.CLASS_SEARCH.GBL?ucFrom=berkeley
+ */
+var createBerkeleyBar = function() {
+  var calcentralBar = '<div class="uc-berkeley-logo-container">' +
+    '<div class="uc-berkeley-logo"></div>' +
+  '</div>';
+
+  var wrapper = document.createElement('div');
+  wrapper.setAttribute('class', 'uc-berkeley-header');
+  wrapper.innerHTML = calcentralBar;
+
+  return wrapper;
+};
+
+/**
+ * Add the Berkeley bar to the page
+ */
+var addBerkeleyBar = function() {
+  var body = document.querySelector('body');
+  var calcentralBar = createBerkeleyBar();
+  prependChild(body, calcentralBar);
+};
+
+/**
  * Add this class to the body so we know that the CalCentral bar has been added
  */
 var addCalCentralCSSClass = function() {
@@ -97,13 +123,19 @@ var addCalCentralCSSClass = function() {
  */
 var loadBar = function() {
   var params = api.util.urlParams();
-  var checkParams = (params.ucFrom && params.ucFromLink);
+  var checkParamsCalCentral = (params.ucFrom && params.ucFromLink);
 
   // Make sure we check the params and only add it when it hasn't been added before
   // Also make sure we don't load the bar within a pop-up (iframe)
-  if (checkParams && !document.querySelector('.uc-calcentral-header') && !isInIframe()) {
+  if (checkParamsCalCentral && !document.querySelector('.uc-calcentral-header') && !isInIframe()) {
     removeNativeBar();
     addCalCentralBar(params);
+    addCalCentralCSSClass();
+  }
+
+  if (params.ucFrom && params.ucFrom === 'berkeley') {
+    removeNativeBar();
+    addBerkeleyBar();
     addCalCentralCSSClass();
   }
 };
