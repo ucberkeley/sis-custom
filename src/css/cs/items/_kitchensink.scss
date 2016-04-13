@@ -347,6 +347,16 @@
     }
   }
 
+  // Custom max-widths, PS does not deliver classes to allow max-width, which we need to
+  // ensure our content fits on smaller devices properly
+  @for $i from 0 through 60 {
+    $amount: 100 + $i * 5px;
+
+    .uc-max-width-#{$amount} {
+      max-width: $amount;
+    }
+  }
+
   // PS does not deliver a class to display a longedit box' labe  on the top of the field
   .uc-longedit-label-top {
     &.ps_box-edit.psc_wrappable:not(.psc_label-suppressed),
